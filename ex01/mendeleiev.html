@@ -62,21 +62,33 @@
 
 		td
 		{
+			color: rgba(255, 255, 255, 0.8);
 			padding: 5px;
 			font-size: 0.7em;
 			text-align: left;
 			margin: 5px;
 			min-width: 90px;
 			/*border: 1px solid rgba(255, 255, 255, 0.5);*/
+			transition: all 0.2s;
 		}
 
 		td[title]
 		{
-			border: 1px solid rgba(255, 255, 255, 0.5);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		td[title]:hover
+		{
+			border: 1px solid rgba(255, 255, 255, 0.0);
+			cursor: pointer;
+			color: rgba(255, 255, 255, 1);
+			background-color: rgba(255, 255, 255, 0.3);
 		}
 
 		td > a
 		{
+			padding: 5px 0;
+			color: rgba(255, 255, 255, 1);
 			font-size: 2.2em;
 			text-align: center;
 			display: block;
@@ -102,13 +114,8 @@
 </head>
 <body>
 	<div class="wrapper">
-		<h1 class="title">Un titre centré
-		</h1>
+		<h1 class="title">Tableau périodique des éléments</h1>
 		<table>
-			<caption><b><strong class="selflink">Tableau périodique des éléments
-			</strong>
-		</b>
-	</caption>
 <tbody>
 
 <tr align="center">
