@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>B.A.BA</title>
+        <meta name="description" content="j00">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+
+			*
+			{
+				box-sizing: border-box;
+			}
+
+			@font-face{font-family:'Raleway';font-style:normal;font-weight:400;src:local('Raleway Regular'),url(//brick.a.ssl.fastly.net/fonts/raleway/400.woff) format('woff')}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;src:local('Raleway Bold'),url(//brick.a.ssl.fastly.net/fonts/raleway/700.woff) format('woff')}
+
+			@font-face
+			{
+				font-family: 'Droid Sans Mono';
+				font-style: normal;
+				font-weight: 400;
+				src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v5/ns-m2xQYezAtqh7ai59hJaH0X__W3S3MJL29bc5CWfs.woff) format('woff');
+			}
+
+			body
+			{
+				color: #fff;
+				background-color: pink;
+				margin: 0;
+			}
+
+			h1,
+			h2,
+			h3
+			{
+				font-family: 'Raleway', 'arial';
+			}
+
+			.wrapper
+			{
+				max-width: 70%;
+				margin: auto;
+				padding: 20px;
+			}
+
+			.title
+			{
+				font-size: 4em;
+				text-align: center;
+			}
+			.boutiques
+			{
+				vertical-align: top;
+			}
+
+			.boutique-element
+			{
+				vertical-align: top;
+				width: 40%;
+				height: 400px;
+				margin: 4%;
+				display: inline-block;
+				text-align: center;
+				padding: 20px;
+				background-color: #fff;
+				border: px solid rgba(0, 0, 0, 0.1);
+				border-radius: 3px;
+			}
+
+			.boutique-element > img
+			{
+				max-width: 300px;
+				height: 300px;
+				text-align: center;
+			}
+			.boutique-element > a
+			{
+				border-top: 3px solid pink;
+				padding-top: 15px;
+				color: pink;
+				text-decoration: none;
+				display: block;
+				font-size: 2em;
+				font-family: 'Raleway', 'arial';
+			}
+
+			footer > p
+			{
+				border-top: 1px solid #fff;
+				width: 100%;
+				text-align: right;
+				font-family: 'Droid Sans Mono', Courier;
+				padding: 10px 20px;
+				font-style: italic;
+			}
+		</style>
+    </head>
+    <body>
+    <div class="wrapper">
+		<h1 class="title">Un titre centré</h1>
+		<section class="boutiques">
+			<article class="boutique-element">
+				<img src="http://wliha.org/sites/default/files/b4e82ab5-d513-16a4-ed85-2bd4e9a2afa2.jpg" alt="Amazon">
+				<a href="http://www.amazon.com">Amazon</a>
+			</article>
+			<article class="boutique-element">
+				<img src="http://www.mega-bonnes-affaires.com/wp-content/uploads/2012/04/fnac-logo1.jpg" alt="Fnac">
+				<a href="http://www.fnac.com">Fnac</a>
+			</article>
+		</section>
+    </div>
+	<footer>
+		<p>© aaubin 2014</p>
+	</footer>
+    </body>
+</html>
