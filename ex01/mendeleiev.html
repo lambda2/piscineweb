@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mendeleïev
+	</title>
+	<meta name="description" content="j00">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		*
+		{
+			box-sizing: border-box;
+		}
+
+		@font-face{font-family:'Raleway';font-style:normal;font-weight:400;src:local('Raleway Regular'),url(//brick.a.ssl.fastly.net/fonts/raleway/400.woff) format('woff')}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;src:local('Raleway Bold'),url(//brick.a.ssl.fastly.net/fonts/raleway/700.woff) format('woff')}
+
+		@font-face
+		{
+			font-family: 'Droid Sans Mono';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v5/ns-m2xQYezAtqh7ai59hJaH0X__W3S3MJL29bc5CWfs.woff) format('woff');
+		}
+
+		@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local(''),url(//brick.a.ssl.fastly.net/fonts/lato/400.woff) format('woff')}@font-face{font-family:'Lato';font-style:normal;font-weight:700;src:local(''),url(//brick.a.ssl.fastly.net/fonts/lato/700.woff) format('woff')}
+
+		body
+		{
+			font-family: 'Lato', Arial, sans-serif;
+			color: #fff;
+			background-color: #0e83cd;
+			margin: 0;
+		}
+
+		h1,
+		h2,
+		h3
+		{
+			font-family: 'Raleway', Arial;
+		}
+
+		.wrapper
+		{
+			max-width: 85%;
+			margin: auto;
+			padding: 20px;
+		}
+
+		.title
+		{
+			font-size: 4em;
+			text-align: center;
+		}
+
+		tr
+		{
+			padding: 5px;
+		}
+
+		td
+		{
+			padding: 5px;
+			font-size: 0.7em;
+			text-align: left;
+			margin: 5px;
+			min-width: 90px;
+			/*border: 1px solid rgba(255, 255, 255, 0.5);*/
+		}
+
+		td[title]
+		{
+			border: 1px solid rgba(255, 255, 255, 0.5);
+		}
+
+		td > a
+		{
+			font-size: 2.2em;
+			text-align: center;
+			display: block;
+		}
+
+		td > small
+		{
+			font-size: 0.7em;
+			text-align: right;
+			display: block;
+		}
+
+		td > a
+		{
+			display: block;
+		}
+
+		
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="title">Un titre centré
+		</h1>
+		<table>
+			<caption><b><strong class="selflink">Tableau périodique des éléments
+			</strong>
+		</b>
+	</caption>
+<tbody>
+
+<tr align="center">
+
+<td title="Nonmetals; Primordial; Gas"><small>1.00794(7)</small><a><b>H</b></a>
+1
+
+</td>
+<td colspan="16"></td>
+<td title="Noble gases; Primordial; Gas"><small>4.002602(2)</small><a><b>He</b></a>
+2
+
+</td>
+</tr>
+<tr align="center">
+
+<td title="Alkali metals; Primordial; Solid"><small>6.941(2)</small><a><b>Li</b></a>
+3
+
+</td>
+<td title="Alkaline earth metals; Primordial; Solid"><small>9.012182(3)</small><a><b>Be</b></a>
+4
+
+</td>
+<td colspan="10"></td>
+<td title="Metalloids; Primordial; Solid"><small>10.811(7)</small><a><b>B</b></a>
+5
+
+</td>
+<td title="Nonmetals; Primordial; Solid"><small>12.0107(8)</small><a><b>C</b></a>
+6
+
+</td>
+<td title="Nonmetals; Primordial; Gas"><small>14.00674(7)</small><a><b>N</b></a>
+7
+
+</td>
+<td title="Nonmetals; Primordial; Gas"><small>15.9994(3)</small><a><b>O</b></a>
+8
+
+</td>
+<td title="Halogens; Primordial; Gas"><small>18.9984032(5)</small><a><b>F</b></a>
+9
+
+</td>
+<td title="Noble gases; Primordial; Gas"><small>20.1797(6)</small><a><b>Ne</b></a>
+10
+
+</td>
+</tr>
+<tr align="center">
+
+<td title="Alkali metals; Primordial; Solid"><small>22.98976928(2)</small><a><b>Na</b></a>
+11
+
+</td>
+<td title="Alkaline earth metals; Primordial; Solid"><small>24.3050(6)</small><a><b>Mg</b></a>
+12
+
+</td>
+<td colspan="10"></td>
+<td title="Poor metals; Primordial; Solid"><small>26.9815386(8)</small><a><b>Al</b></a>
+13
+
+</td>
+<td title="Metalloids; Primordial; Solid"><small>28.0855(3)</small><a><b>Si</b></a>
+14
+
+</td>
+<td title="Nonmetals; Primordial; Solid"><small>30.973762(2)</small><a><b>P</b></a>
+15
+
+</td>
+<td title="Nonmetals; Primordial; Solid"><small>32.066(6)</small><a><b>S</b></a>
+16
+
+</td>
+<td title="Halogens; Primordial; Gas"><small>35.4527(9)</small><a><b>Cl</b></a>
+17
+
+</td>
+<td title="Noble gases; Primordial; Gas"><small>39.948(1)</small><a><b>Ar</b></a>
+18
+
+</td>
+</tr>
+<tr align="center">
+
+<td title="Alkali metals; Primordial; Solid"><small>39.0983(1)</small><a><b>K</b></a>
+19
+
+</td>
+<td title="Alkaline earth metals; Primordial; Solid"><small>40.078(4)</small><a><b>Ca</b></a>
+20
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>44.955912(6)</small><a><b>Sc</b></a>
+21
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>47.867(1)</small><a><b>Ti</b></a>
+22
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>50.9415(1)</small><a><b>V</b></a>
+23
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>51.9961(6)</small><a><b>Cr</b></a>
+24
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>54.938045(5)</small><a><b>Mn</b></a>
+25
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>55.845(2)</small><a><b>Fe</b></a>
+26
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>58.933195(5)</small><a><b>Co</b></a>
+27
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>58.6934(2)</small><a><b>Ni</b></a>
+28
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>63.546(3)</small><a><b>Cu</b></a>
+29
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>65.39(2)</small><a><b>Zn</b></a>
+30
+
+</td>
+<td title="Poor metals; Primordial; Solid"><small>69.723(1)</small><a><b>Ga</b></a>
+31
+
+</td>
+<td title="Metalloids; Primordial; Solid"><small>72.61(2)</small><a><b>Ge</b></a>
+32
+
+</td>
+<td title="Metalloids; Primordial; Solid"><small>74.92160(2)</small><a><b>As</b></a>
+33
+
+</td>
+<td title="Nonmetals; Primordial; Solid"><small>78.96(3)</small><a><b>Se</b></a>
+34
+
+</td>
+<td title="Halogens; Primordial; Liquid"><small>79.904(1)</small><a><b>Br</b></a>
+35
+
+</td>
+<td title="Noble gases; Primordial; Gas"><small>83.80(1)</small><a><b>Kr</b></a>
+36
+
+</td>
+</tr>
+<tr align="center">
+
+<td title="Alkali metals; Primordial; Solid"><small>85.4678(3)</small><a><b>Rb</b></a>
+37
+
+</td>
+<td title="Alkaline earth metals; Primordial; Solid"><small>87.62(1)</small><a><b>Sr</b></a>
+38
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>88.90585(2)</small><a><b>Y</b></a>
+39
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>91.224(2)</small><a><b>Zr</b></a>
+40
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>92.90638(2)</small><a><b>Nb</b></a>
+41
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>95.94(1)</small><a><b>Mo</b></a>
+42
+
+</td>
+<td title="Transition metals; Natural radio; Solid"><small>[97.9072]</small><a><b>Tc</b></a>
+43
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>101.07(2)</small><a><b>Ru</b></a>
+44
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>102.90550(2)</small><a><b>Rh</b></a>
+45
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>106.42(1)</small><a><b>Pd</b></a>
+46
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>107.8682(2)</small><a><b>Ag</b></a>
+47
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>112.411(8)</small><a><b>Cd</b></a>
+48
+
+</td>
+<td title="Poor metals; Primordial; Solid"><small>114.818(3)</small><a><b>In</b></a>
+49
+
+</td>
+<td title="Poor metals; Primordial; Solid"><small>118.710(7)</small><a><b>Sn</b></a>
+50
+
+</td>
+<td title="Metalloids; Primordial; Solid"><small>121.760(1)</small><a><b>Sb</b></a>
+51
+
+</td>
+<td title="Metalloids; Primordial; Solid"><small>127.60(3)</small><a><b>Te</b></a>
+52
+
+</td>
+<td title="Halogens; Primordial; Solid"><small>126.90447(3)</small><a><b>I</b></a>
+53
+
+</td>
+<td title="Noble gases; Primordial; Gas"><small>131.29(2)</small><a><b>Xe</b></a>
+54
+
+</td>
+</tr>
+<tr align="center">
+
+<td title="Alkali metals; Primordial; Solid"><small>132.9054519(2)</small><a><b>Cs</b></a>
+55
+
+</td>
+<td title="Alkaline earth metals; Primordial; Solid"><small>137.327(7)</small><a><b>Ba</b></a>
+56
+
+</td>
+<td title="Lanthanides;&nbsp;; Solid"><a class="mw-redirect"></a>
+57-71
+*
+</td>
+<td title="Transition metals; Primordial; Solid"><small>178.49(2)</small><a><b>Hf</b></a>
+72
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>180.94788(2)</small><a><b>Ta</b></a>
+73
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>183.84(1)</small><a><b>W</b></a>
+74
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>186.207(1)</small><a><b>Re</b></a>
+75
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>190.23(3)</small><a><b>Os</b></a>
+76
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>192.217(3)</small><a><b>Ir</b></a>
+77
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>195.084(9)</small><a><b>Pt</b></a>
+78
+
+</td>
+<td title="Transition metals; Primordial; Solid"><small>196.966569(4)</small><a><b>Au</b></a>
+79
+
+</td>
+<td><small>200.59(2)</small><a>Hg</a>
+<center>
+80
+
+</center>
+</td>
+<td title="Poor metals; Primordial; Solid"><small>204.3833(2)</small><a><b>Tl</b></a>
+81
+
+</td>
+<td title="Poor metals; Primordial; Solid"><small>207.2(1)</small><a><b>Pb</b></a>
+82
+
+</td>
+<td title="Poor metals; Primordial; Solid"><small>208.98040(1)</small><a><b>Bi</b></a>
+83
+
+</td>
+<td title="Poor metals; Natural radio; Solid"><small>[208.9824]</small><a><b>Po</b></a>
+84
+
+</td>
+<td title="Halogens; Natural radio; Solid"><small>[209.9871]</small><a><b>At</b></a>
+85
+
+</td>
+<td title="Noble gases; Natural radio; Gas"><small>[222.0176]</small><a><b>Rn</b></a>
+86
+
+</td>
+</tr>
+<tr align="center">
+
+<td title="Alkali metals; Natural radio; Solid"><small>[223.0197]</small><a><b>Fr</b></a>
+87
+
+</td>
+<td title="Alkaline earth metals; Natural radio; Solid"><small>[226.0254]</small><a><b>Ra</b></a>
+88
+
+</td>
+<td title="Actinides;&nbsp;; Solid"><a class="mw-redirect"></a>
+89-103
+**
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[263.1125]</small><a><b>Rf</b></a>
+104
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[262.1144]</small><a><b>Db</b></a>
+105
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[266.1219]</small><a><b>Sg</b></a>
+106
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[264.1247]</small><a><b>Bh</b></a>
+107
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[269.1341]</small><a><b>Hs</b></a>
+108
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[268.1388]</small><a class="mw-redirect"><b>Mt</b></a>
+109
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[272.1463]</small><a><b>Ds</b></a>
+110
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[272.1535]</small><a><b>Rg</b></a>
+111
+
+</td>
+<td title="Transition metals; Synthetic; Solid"><small>[277]</small><a><b>Cn</b></a>
+112
+
+</td>
+<td title="Poor metals; Synthetic; Solid"><small>[284]</small><a><b>Uut</b></a>
+113
+
+</td>
+<td title="Poor metals; Synthetic; Solid"><small>[289]</small><a><b>Fl</b></a>
+114
+
+</td>
+<td title="Poor metals; Synthetic; Solid"><small>[288]</small><a><b>Uup</b></a>
+115
+
+</td>
+<td title="Poor metals; Synthetic; Solid"><small>[292]</small><a><b>Lv</b></a>
+116
+
+</td>
+<td title="Halogens; Synthetic; Solid"><small>[292]</small><a><b>Uus</b></a>
+117
+
+</td>
+<td title="Noble gases; Synthetic; Solid"><small>[294]</small><a><b>Uuo</b></a>
+118
+
+</td>
+</tr>
+<tr>
+<td colspan="21"></td>
+</tr>
+<tr>
+<td align="right" colspan="3"><a>Lanthanides</a>*&nbsp; &nbsp;</td>
+<td title="Lanthanides; Primordial; Solid"><small>138.90547(7)</small><a><b>La</b></a>
+57
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>140.116(1)</small><a><b>Ce</b></a>
+58
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>140.90765(2)</small><a><b>Pr</b></a>
+59
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>144.242(3)</small><a><b>Nd</b></a>
+60
+
+</td>
+<td title="Lanthanides; Natural radio; Solid"><small>[144.9127]</small><a><b>Pm</b></a>
+61
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>150.36(2)</small><a><b>Sm</b></a>
+62
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>151.964(1)</small><a><b>Eu</b></a>
+63
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>157.25(3)</small><a><b>Gd</b></a>
+64
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>158.92535(2)</small><a><b>Tb</b></a>
+65
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>162.500(1)</small><a><b>Dy</b></a>
+66
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>164.93032(2)</small><a><b>Ho</b></a>
+67
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>167.259(3)</small><a><b>Er</b></a>
+68
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>168.93421(2)</small><a><b>Tm</b></a>
+69
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>173.04(3)</small><a><b>Yb</b></a>
+70
+
+</td>
+<td title="Lanthanides; Primordial; Solid"><small>174.967(1)</small><a><b>Lu</b></a>
+71
+
+</td>
+</tr>
+<tr>
+<td align="right" colspan="3"><a>Actinides</a>**&nbsp; &nbsp;</td>
+<td title="Actinides; Natural radio; Solid"><small>[227.0277]</small><a><b>Ac</b></a>
+89
+
+</td>
+<td title="Actinides; Primordial; Solid"><small>232.03806(2)</small><a><b>Th</b></a>
+90
+
+</td>
+<td title="Actinides; Natural radio; Solid"><small>231.03588(2)</small><a><b>Pa</b></a>
+91
+
+</td>
+<td title="Actinides; Primordial; Solid"><small>238.02891(3)</small><a><b>U</b></a>
+92
+
+</td>
+<td title="Actinides; Natural radio; Solid"><small>[237.0482]</small><a><b>Np</b></a>
+93
+
+</td>
+<td title="Actinides; Primordial; Solid"><small>[244.0642]</small><a><b>Pu</b></a>
+94
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[243.0614]</small><a><b>Am</b></a>
+95
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[247.0703]</small><a><b>Cm</b></a>
+96
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[247.0703]</small><a><b>Bk</b></a>
+97
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[251.0796]</small><a><b>Cf</b></a>
+98
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[252.0830]</small><a><b>Es</b></a>
+99
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[257.0951]</small><a><b>Fm</b></a>
+100
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[258.0984]</small><a><b>Md</b></a>
+101
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[259.1011]</small><a><b>No</b></a>
+102
+
+</td>
+<td title="Actinides; Synthetic; Solid"><small>[262.110]</small><a><b>Lr</b></a>
+103
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<footer>
+	<p>© aaubin 2014
+	</p>
+	
+</footer>
+
+</body>
+
+</html>
