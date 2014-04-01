@@ -18,7 +18,6 @@ function do_op($args)
 		return (preg_match("/^[\d]*$/", $a));
 	}
 
-
 	function is_op($a, $ref)
 	{
 		return (in_array($a, array_keys($ref)));
@@ -32,18 +31,24 @@ function do_op($args)
 		"%" => function($a, $b){ return $a % $b; }
 	);
 
-	array_shift($args);
-	$args = implode(" ", $args);
-	$cleaned = array_map("clean_element", explode(" ", $args));
-	$arr = array_values(array_filter($cleaned, "drop_element"));
-	/*if (is_num($arr[0]) && is_op($arr[1], $operations) && is_num($arr[2]))*/
+	if (!preg_match_all("/\+|-|\/|%|\*/", trim($args), $res))
 	{
-		$result = $operations[$arr[1]]($arr[0], $arr[2]);
+		echo "Syntax Error\n";
+		return (1);
+	}
+	$split = preg_split("/\+|-|\/|%|\*/", trim($args));
+	$cleaned = array_map("clean_element", $split);
+	$arr = array_values(array_filter($cleaned, "drop_element"));
+	if (is_num($arr[0]) && is_num($arr[1]))
+	{
+		$result = $operations[$res[0][0]]($arr[0], $arr[1]);
 		echo "$result\n";
 	}
+	else
+		echo "Syntax Error\n";
 }
-if (count($argv) == 4)
-	do_op($argv);
+if (count($argv) == 2)
+	do_op($argv[1]);
 else
 	echo "Incorrect Parameters\n";
 ?>
