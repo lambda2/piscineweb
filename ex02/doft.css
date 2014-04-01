@@ -97,16 +97,6 @@
 				border-radius: 5px;
 			}
 
-			footer > p
-			{
-				border-top: 1px solid #fff;
-				width: 100%;
-				text-align: right;
-				font-family: 'Droid Sans Mono', Courier;
-				padding: 10px 20px;
-				font-style: italic;
-			}
-
 			.main
 			{
 				display: inline-block;
@@ -118,10 +108,67 @@
 				box-shadow: 10px 10px 10px #000;
 			}
 
+			footer
+			{
+				width: 490px;
+				height: 150px;
+				background-color: #88FF89;
+				box-shadow: 10px 10px 10px #000;
+				border-radius: 10px;
+				color: #000;
+				font-family: verdana;
+				position: relative;
+				top: -99px;
+				left: 196px;
+				padding: 10px;
+			}
+
+			footer p
+			{
+				margin: 0;
+				padding: 0;
+			}
+
+			footer .text-entrez
+			{
+				font-size: 2em;
+				font-family: serif;
+				font-weight: 300;
+				letter-spacing: 3px;
+			}
+
+			footer .text-bk
+			{
+				display: block;
+			}
+
+			footer .text-ordi
+			{
+				text-shadow: 5px 5px 4px #ff4040;
+			}
+
+			footer .italique
+			{
+				font-style: italic;
+			}
+
+			input[type="text"]
+			{
+				width: 380px;
+				display: inline-block;
+				margin-right: 5px;
+			}
+
 			.main > img
 			{
 				width: 1000px;
 				height: auto;
+			}
+
+			.button
+			{
+				width: 100px;
+				border-radius: 2px;
 			}
 
 			.brick-item
