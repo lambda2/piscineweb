@@ -14,7 +14,7 @@ function ft_split($str)
 
 	$cleaned = array_map("clean_element", explode(" ", $str));
 	$filtered = array_filter($cleaned, "drop_element");
-	sort($filtered);
+	usort($filtered, 'strcmp');
 	return ($filtered);
 }
 ?>
