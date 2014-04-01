@@ -22,6 +22,7 @@
 			color: #fff;
 			background-color: #0e83cd;
 			margin: 0;
+			transition: background-color 2s;
 		}
 
 		h1,
@@ -158,11 +159,22 @@
 				margin: 5px;
 				min-width: 60px;
 			}
+
+			body
+			{
+				background-color: #636994;
+			}
 		}
 
 
 
 		@media screen and (max-width: 1420px) {
+
+
+			body
+			{
+				background-color: #72559E;
+			}
 
 			.title
 			{
@@ -199,6 +211,13 @@
 
 
 		@media screen and (max-width: 1150px) {
+
+
+			body
+			{
+				background-color: #98559E;
+			}
+
 			td {
 				color: rgba(255, 255, 255, 0.8);
 				padding: 3px;
@@ -270,6 +289,12 @@
 
 		@media screen and (max-width: 900px) {
 
+
+			body
+			{
+				background-color: #9E5555;
+			}
+
 			.title
 			{
 				font-size: 2em;
@@ -278,6 +303,12 @@
 
 
 		@media screen and (max-width: 660px) {
+
+
+			body
+			{
+				background-color: #757924;
+			}
 
 			.title
 			{
