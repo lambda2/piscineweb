@@ -1,0 +1,135 @@
+
+			header
+			{
+				width: 1420px;
+				height: 137px;
+				background-color: #909090;
+				border-radius: 10px;
+				margin: 18px auto 0px auto;
+				position: relative;
+				box-shadow: 10px 10px 10px #000;
+			}
+
+			/* Day of the 42 logo */
+			header > img:first-child
+			{
+				margin: 10px 0px 0px 10px;
+				height: 110px;
+			}
+
+			/* La loupe */
+			header > img:nth-child(2)
+			{
+				position: absolute;
+				right: 30px;
+				top: 10px;
+			}
+
+			/* Reload */
+			header > img:nth-child(3)
+			{
+				position: absolute;
+				right: 10px;
+				height: 20px;
+				top: 10px;
+			}
+
+			/* Close                                                                                                                                                                                                                                                                       */
+			header > img:nth-child(4)
+			{
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+
+			body
+			{
+				color: #fff;
+				background-color: #505050;
+				margin: 0;
+			}
+
+			h1,
+			h2,
+			h3
+			{
+				font-family: 'Raleway', 'arial';
+			}
+
+			.wrapper
+			{
+				text-align: center;
+				max-width: 90%;
+				margin: auto;
+				padding: 20px;
+			}
+
+			.title
+			{
+				font-size: 4em;
+				text-align: center;
+			}
+
+			nav
+			{
+				vertical-align: top;
+				width: 140px;
+				display: inline-block;
+				text-align: center;
+				background-color: #909090;
+				border-radius: 10px;
+				min-height: 430px;
+				margin: 0px 25px;
+				padding-top: 10px;
+				box-shadow: 10px 10px 10px #000;
+			}
+
+			nav img {
+				width: 69px;
+				margin: 0px;
+				border: 5px solid #909090;
+				border-radius: 5px;
+			}
+
+			.red
+			{
+				border: 5px solid red;
+				border-radius: 5px;
+			}
+
+			footer > p
+			{
+				border-top: 1px solid #fff;
+				width: 100%;
+				text-align: right;
+				font-family: 'Droid Sans Mono', Courier;
+				padding: 10px 20px;
+				font-style: italic;
+			}
+
+			.main
+			{
+				display: inline-block;
+				background-color: #909090;
+				border-radius: 10px;
+				margin: 0px auto 0px auto;
+				padding: 10px;
+				position: relative;
+				box-shadow: 10px 10px 10px #000;
+			}
+
+			.main > img
+			{
+				width: 1000px;
+				height: auto;
+			}
+
+			.brick-item
+			{
+				width: 120px;
+				height: 69px;
+				margin: 0px auto;
+				max-height: 70px;
+				background-image: url(resources/brick.jpg);
+				background-repeat: repeat;
+			}
