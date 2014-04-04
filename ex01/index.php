@@ -16,10 +16,21 @@
  * limitations under the License.
  */
 
+session_start();
+
+if (isset($_GET["login"]) and isset($_GET["passwd"]))
+{
+	$_SESSION = array_merge($_SESSION, $_GET);
+}
+
 ?>
 
-<form action="index.php" method="GET">
-    <label for="input-login">Login: </label><input id="input-login" type="text" name="login" value="">
-    <label for="input-passwd">Password: </label><input id="input-passwd" type="password" name="passwd" value="">
-    <input type="submit" name="submit" value="OK">
-</form>
+<html>
+	<body>
+		<form action="index.php" method="GET">
+		    <label for="input-login">Login: </label><input id="input-login" type="text" name="login" value="<?= $_SESSION['login'] ?>">
+		    <label for="input-passwd">Password: </label><input id="input-passwd" type="password" name="passwd" value="<?= $_SESSION['passwd'] ?>">
+		    <input type="submit" name="submit" value="OK">
+		</form>
+	</body>
+</html>
