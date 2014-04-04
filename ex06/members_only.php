@@ -10,7 +10,7 @@ else
 {
 	if ($_SERVER['PHP_AUTH_USER'] == "zaz" && $_SERVER['PHP_AUTH_PW'] == "jaimelespetitsponeys")
 	{
-		$data = base64_encode(file_get_contents("./img/42.png"));
+		$data = base64_encode(file_get_contents("../img/42.png"));
 		echo "<html><body>Bonjour Zaz<br /><img src=\"data:image/png;base64,$data\"></html></body>\n";
 	}
 	else
