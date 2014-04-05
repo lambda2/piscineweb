@@ -72,9 +72,7 @@ function passIsValid($login, $pass, $db)
 	return (false);
 }
 
-/*
- * Si on a qque chose dans le formulaire
- */
+
 if (checkFormArgs($_POST))
 {
 	$db = getDb();
