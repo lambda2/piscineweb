@@ -31,28 +31,45 @@ function saveDb($db, $file = "../private/passwd")
 
 /**
  * Will check that the forms arguments are here and corrects
+ * @return bool if is valid, false otherwise
  */
 function checkFormArgs($f)
 {
 	return (
 		$f and isset($f["submit"]) and $f["submit"] = "ok"
 		and isset($f["login"]) and $f["login"] != ""
-		and isset($f["passwd"]) and $f["passwd"] != ""
+		and isset($f["oldpw"]) and $f["oldpw"] != ""
+		and isset($f["newpw"]) and $f["newpw"] != ""
 	);
 }
 
-/**
- * Will check if the given login exists in the given $db array
- */
-function loginExists($login, $db)
+function in_da_array($item, $array)
 {
-	$logins = array_reduce($db, function($e, $item) {
-		if ($item) {
-			$e[] = $item["login"];
+	foreach ($array as $key => $value)
+	{
+		if ($value === $item)
+			return (true);
+	}
+	return (false);
+}
+
+/**
+ * Will check if the login / password combinaison
+ * is valid.
+ * @return bool if is valid, false otherwise
+ */
+function passIsValid($login, $pass, $db)
+{
+	$logins = array();
+	foreach ($db as $key => $item)
+	{
+		if ($item["login"] == $login
+			and $item["passwd"] == $pass)
+		{
+			return (true);
 		}
-		return ($e);
-	}, array());
-	return (in_array($_POST["login"], $logins));
+	}
+	return (false);
 }
 
 /*
@@ -62,18 +79,22 @@ if (checkFormArgs($_POST))
 {
 	$db = getDb();
 
-	if (loginExists($_POST["login"], $db))
+	if (!passIsValid($_POST["login"], hash("sha256", $_POST["oldpw"]), $db))
 	{
 		echo "ERROR\n";
 	}
 	else
 	{
-		// Create a new array with the user login and an hashed password.
-		$infos = array(
-			"login" => $_POST["login"],
-			"passwd" => hash("sha256", $_POST["passwd"])
-		);
-		$db[] = $infos;
+		foreach ($db as $key => $item)
+		{
+			if ($item["login"] == $_POST["login"])
+			{
+				$db[$key] = array(
+					"login" => $_POST["login"],
+					"passwd" => hash("sha256", $_POST["newpw"])
+				);
+			}
+		}
 		saveDb($db);
 		echo "OK\n";
 	}

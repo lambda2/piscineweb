@@ -41,18 +41,27 @@ function checkFormArgs($f)
 	);
 }
 
+function in_da_array($item, $array)
+{
+	foreach ($array as $key => $value) {
+		if ($value === $item)
+			return (true);
+	}
+	return (false);
+}
+
 /**
  * Will check if the given login exists in the given $db array
  */
 function loginExists($login, $db)
 {
-	$logins = array_reduce($db, function($e, $item) {
-		if ($item) {
-			$e[] = $item["login"];
-		}
-		return ($e);
-	}, array());
-	return (in_array($_POST["login"], $logins));
+	$logins = array();
+	foreach ($db as $key => $item)
+	{
+		if ($item)
+			$logins[] = $item["login"];
+	}
+	return (in_da_array($_POST["login"], $logins));
 }
 
 /*
