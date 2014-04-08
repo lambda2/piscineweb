@@ -5,4 +5,5 @@ WHERE
 	OR
 		f.prenom REGEXP '[- ]{1,}'
 ORDER BY
-	nom ASC, prenom ASC;
+	nom ASC,
+	prenom ASC;
